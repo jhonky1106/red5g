@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tecnologías de acceso inalámbrico 5G - Jhon Arce</title>
+  <link href="logo-5g.jpg" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f5f5;
+      --card:#ffffff;
+      --accent:#0077cc;
+      --text:#333333;
+      --muted:#666666;
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Roboto, Arial, sans-serif;background:var(--bg);color:var(--text);margin:0;padding:30px;display:flex;justify-content:center}
+    .container{width:100%;max-width:var(--maxw)}
+    header{background:var(--card);padding:24px;border-radius:12px;display:flex;gap:20px;align-items:center;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+    header img.logo{width:88px;height:56px;object-fit:cover;border-radius:8px}
+    header h1{font-family:Poppins, sans-serif;margin:0;font-size:20px}
+    header .meta{margin-left:auto;text-align:right;font-size:14px;color:var(--muted)}
+
+    main{margin-top:20px;display:grid;gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .lead-image{width:100%;height:460px;object-fit:cover;border-radius:8px}
+    .section-title{font-family:Poppins, sans-serif;font-size:18px;margin-bottom:8px;color:var(--accent)}
+    p{line-height:1.6;margin:8px 0}
+    ul{margin:8px 0 12px 20px}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    table th, table td{border:1px solid #e6e6e6;padding:10px;text-align:left;font-size:14px}
+    figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+    footer{margin-top:20px;padding:12px;border-radius:8px;text-align:center;color:var(--muted);font-size:14px}
+  
+    @media (max-width:640px){header{flex-direction:column;align-items:flex-start} header .meta{text-align:left;width:100%}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="logo-5g.jpg" alt="Logo 5G">
+      <div>
+        <h1>Tecnologías de acceso inalámbrico 5G</h1>
+        <div style="font-size:14px;color:var(--muted)">Curso: COM22 Producción Multimedial</div>
+      </div>
+      <div class="meta">
+        <div><strong>Estudiante:</strong> Jhon Arce</div>
+        <div><strong>Año:</strong> 2025</div>
+      </div>
+    </header>
+    <section class="card">
+      <h2 class="section-title">Presentación</h2>
+      <figure>
+        <img class="lead-image" src="representacion-5g.webp" alt="Red 5G ilustrativa">
+        <figcaption>Representación esquemática de una red 5G.</figcaption>
+      </figure>
+    </section>
+    <section class="card">
+      <h2 class="section-title">Introducción</h2>
+      <p>
+        Las tecnologías de acceso inalámbrico 5G representan la quinta generación de redes móviles y constituyen un cambio de paradigma
+        en la forma de brindar conectividad. A diferencia de generaciones anteriores, 5G no solo busca incrementar las velocidades de
+        descarga, sino habilitar una latencia ultra baja, mayor densidad de dispositivos conectados y nuevas arquitecturas de red que soporten
+        casos de uso industriales, médicos, de transporte y de entretenimiento.
+      </p>
+      <p>
+        Este documento explica conceptos clave, subtecnologías de acceso (como mmWave, sub-6 GHz, Massive MIMO), ventajas y desafíos,
+        y presenta ejemplos prácticos de despliegue. El objetivo es ofrecer una visión técnica y aplicable, útil para desarrolladores,
+        diseñadores de redes y estudiantes de producción multimedial que integran servicios basados en 5G.
+      </p>
+    </section>
+    <section class="card">
+      <h2 class="section-title">Desarrollo y contenido</h2>
+      <h3>Conceptos clave</h3>
+      <ul>
+        <li><strong>Acceso radio (RAN):</strong> Conjunto de equipos que conectan el usuario final a la red central.</li>
+        <li><strong>mmWave:</strong> Bandas de frecuencia superiores a 24 GHz para velocidades extremas y menor cobertura.</li>
+        <li><strong>sub-6 GHz:</strong> Bandas por debajo de 6 GHz que ofrecen compromiso entre cobertura y velocidad.</li>
+        <li><strong>Massive MIMO:</strong> Antenas múltiples a gran escala que aumentan capacidad y eficiencia espectral.</li>
+        <li><strong>Network Slicing:</strong> Segmentación de la red en 'rebanadas' virtuales con características dedicadas.</li>
+      </ul>
+
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Baja latencia (tiempos de respuesta en milisegundos).</li>
+        <li>Mayor capacidad por unidad de área.</li>
+        <li>Conexión masiva de dispositivos IoT.</li>
+        <li>Soporte para servicios críticos (salud remota, control industrial).</li>
+      </ul>
+
+      <h3>Desventajas y retos</h3>
+      <ul>
+        <li>Coste de despliegue y densificación de estaciones base en mmWave.</li>
+        <li>Interoperabilidad con redes legacy y seguridad.</li>
+        <li>Regulación y asignación de espectro.</li>
+      </ul>
+
+      <h3>Componentes y herramientas</h3>
+      <p>La implementación práctica de 5G implica tanto hardware (estaciones base, antenas Massive MIMO) como software (orquestadores, 
+      funciones de red virtualizadas —NFV— y herramientas de monitoreo y automatización).</p>
+
+      <h3>Tabla comparativa: sub-6 vs mmWave</h3>
+      <table>
+        <thead>
+          <tr><th>Característica</th><th>sub-6 GHz</th><th>mmWave</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Rango</td><td>Amplia cobertura</td><td>Cobertura limitada, alto atenuación</td></tr>
+          <tr><td>Velocidad</td><td>Alta</td><td>Muy alta (Gbps)</td></tr>
+          <tr><td>Penetración de señal</td><td>Buena</td><td>Débil</td></tr>
+          <tr><td>Uso típico</td><td>Cobertura urbana y rural</td><td>Zonas densas, hotspots</td></tr>
+        </tbody>
+      </table>
+
+      <figure style="margin-top:12px">
+        <img src="beamforming.jpg" alt="beamforming esquema" style="width:100%;height:600px;object-fit:cover;border-radius:8px">
+        <figcaption>Figura 2: Esquema simplificado de beamforming.</figcaption>
+      </figure>
+    </section>
+    <section class="card">
+      <h2 class="section-title">Ejemplos y casos prácticos</h2>
+      <p>
+        1) <strong>Transmisión en eventos masivos:</strong> 5G permite ofrecer capacidad adicional en recintos deportivos mediante celdas temporales
+        y network slicing para soportar video en alta resolución y experiencias interactivas.
+      </p>
+      <p>
+        2) <strong>Manufactura inteligente:</strong> Comunicación ultra confiable y latencia baja para control en tiempo real de robots y sensores.
+      </p>
+      <p>
+        3) <strong>Vehículos conectados:</strong> V2X sobre 5G para coordinación entre vehículos y sistemas de tráfico inteligente.
+      </p>
+    </section>
+    <section class="card">
+      <h2 class="section-title">Conclusiones</h2>
+      <p>
+        5G es más que una mejora de velocidad; es una plataforma habilitadora para nuevas industrias y servicios. Su adopción requiere
+        planificación de espectro, inversión en infraestructura y desarrollo de capacidades en software de orquestación. Para profesionales
+        de producción multimedial, 5G abre oportunidades de experiencia inmersiva (AR/VR) y transmisión de alta calidad desde dispositivos móviles.
+      </p>
+      <p>
+        En resumen: 5G combina mejoras en rendimiento con cambios arquitectónicos que permitirán nuevas aplicaciones siempre que se gestionen
+        adecuadamente los retos económicos y regulatorios.
+      </p>
+    </section>
+
+    <footer class="card">
+      Derechos reservados · Jhon Arce · 2025
+    </footer>
+  </div>
+</body>
+</html>
